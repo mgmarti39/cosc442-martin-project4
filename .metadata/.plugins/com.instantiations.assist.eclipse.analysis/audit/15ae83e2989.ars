@@ -3,10 +3,10 @@
 <auditResultSet
 		version="1.0"
 		baseName="CoffeeMaker"
-		name="CoffeeMaker at 3/19/17 2:51 PM"
+		name="CoffeeMaker at 3/19/17 4:24 PM"
 		systemDefined="false"
-		startTime="1489949466033"
-		endTime="1489949467670"
+		startTime="1489955072393"
+		endTime="1489955073630"
 		cancelled="false"
 		outOfMemory="false">
 	<analysis
@@ -598,9 +598,9 @@
 		<resource
 				type="1"
 				path="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/CoffeeMaker.java"
-				characterCount="5502"
+				characterCount="5506"
 				lineCount="194"
-				nonCommentLineCount="121"/>
+				nonCommentLineCount="120"/>
 		<resource
 				type="1"
 				path="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/CoffeeMakerTest.java"
@@ -617,15 +617,15 @@
 		<resource
 				type="1"
 				path="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/Main.java"
-				characterCount="9328"
-				lineCount="284"
-				nonCommentLineCount="205"
+				characterCount="9639"
+				lineCount="287"
+				nonCommentLineCount="209"
 				authors="Josh"/>
 		<resource
 				type="1"
 				path="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/Recipe.java"
-				characterCount="2980"
-				lineCount="149"
+				characterCount="2995"
+				lineCount="151"
 				nonCommentLineCount="85"
 				authors="Josh"/>
 	</analysis>
@@ -665,8 +665,8 @@
 			violationId="com.instantiations.assist.eclipse.analysis.disallowReturnMutable.returnedMutable"
 			targetType="com.instantiations.assist.eclipse.analysis.analysisTargetType.compilationUnit"
 			target="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/CoffeeMaker.java"
-			highlightStart="3968"
-			highlightEnd="3977"
+			highlightStart="3972"
+			highlightEnd="3981"
 			alternateDirectiveIndices=""
 			severity="1"
 			hasBeenResolved="false">
@@ -687,8 +687,8 @@
 			violationId="com.instantiations.assist.eclipse.analysis.disallowReturnMutable.returnedMutable"
 			targetType="com.instantiations.assist.eclipse.analysis.analysisTargetType.compilationUnit"
 			target="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/CoffeeMaker.java"
-			highlightStart="5043"
-			highlightEnd="5051"
+			highlightStart="5047"
+			highlightEnd="5055"
 			alternateDirectiveIndices=""
 			severity="1"
 			hasBeenResolved="false">
@@ -709,8 +709,8 @@
 			violationId="com.instantiations.assist.eclipse.analysis.mutabilityOfArrays.returnInternalArray"
 			targetType="com.instantiations.assist.eclipse.analysis.analysisTargetType.compilationUnit"
 			target="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/CoffeeMaker.java"
-			highlightStart="5076"
-			highlightEnd="5095"
+			highlightStart="5080"
+			highlightEnd="5099"
 			alternateDirectiveIndices=""
 			severity="1"
 			hasBeenResolved="false"/>
@@ -720,8 +720,8 @@
 			violationId="com.instantiations.assist.eclipse.analysis.disallowReturnMutable.returnedMutable"
 			targetType="com.instantiations.assist.eclipse.analysis.analysisTargetType.compilationUnit"
 			target="/CoffeeMaker/src/edu/towson/cis/cosc442/project4/coffeemaker/CoffeeMaker.java"
-			highlightStart="5233"
-			highlightEnd="5239"
+			highlightStart="5237"
+			highlightEnd="5243"
 			alternateDirectiveIndices=""
 			severity="1"
 			hasBeenResolved="false">

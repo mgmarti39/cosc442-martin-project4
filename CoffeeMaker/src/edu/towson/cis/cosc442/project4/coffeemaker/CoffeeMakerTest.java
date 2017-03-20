@@ -6,9 +6,11 @@ import junit.framework.TestCase;
  *
  */
 public class CoffeeMakerTest extends TestCase {
+	private static final int chocolate = 0;
 	private CoffeeMaker cm;
 	private Inventory i;
 	private Recipe r1;
+	private Recipe o1;
 
 	public void setUp() {
 		cm = new CoffeeMaker();
@@ -24,6 +26,7 @@ public class CoffeeMakerTest extends TestCase {
 	}
 
 	public void testAddRecipe1() {
+		cm.addRecipe(r1);
 		assertTrue(cm.addRecipe(r1));
 	}
 
@@ -33,10 +36,90 @@ public class CoffeeMakerTest extends TestCase {
 	}
 
 	public void testEditRecipe1() {
+		Recipe r2 = new Recipe();
+		r2.setName("TestCof");
 		cm.addRecipe(r1);
-		Recipe newRecipe = new Recipe();
+		
+		Recipe newRecipe = new Recipe(); 
 		newRecipe = r1;
 		newRecipe.setAmtSugar(2);
+		newRecipe.setAmtMilk(3);
+		//addRecipe(r1);
 		assertTrue(cm.editRecipe(r1, newRecipe));
+		assertTrue(cm.editRecipe(newRecipe, newRecipe));
+		
+		Recipe r3 = new Recipe();
+		r3.setName("TestCof3");
+		
+		Recipe r4 = new Recipe();
+		r4.setName("TestCof4");
+		
+		Recipe r5 = new Recipe();
+		r5.setName("TestCof5");
+		
+		cm.addRecipe(r3);
+		cm.addRecipe(r4);
+		cm.addRecipe(r5);
+		cm.editRecipe(r5,r5);
+		
+		if(r2 instanceof Recipe){
+			
+			r2.setAmtChocolate(-1);
+			r2.setAmtCoffee(-1);
+			r2.setAmtMilk(-1);
+			r2.setAmtSugar(-1);
+			r2.setName(" ");
+			r2.setPrice(-1);
+			r2.toString();
+		}
+		
+		
+		
+		
 	}
+	public void testAddInventory1() {
+		cm.addInventory(15,15,15,15);
+		cm.addInventory(-15,15,15,15);
+		assertTrue(cm.addInventory(15,15,15,15));
+		
+		//assertTrue(cm.addInventory(5,0,0,0));
+		
+		
+		
+	}
+	public void testCheckInventory1(){
+		cm.addInventory(6,1,1,0);
+		Inventory i =cm.checkInventory();
+	
+		if(i instanceof Inventory){
+		i.setChocolate(-1);
+		i.setCoffee(-1);
+		i.setMilk(-1);
+		i.setSugar(-1);
+		i.toString();
+		
+		}
+		
+		
+	} 
+	public void testPurchaseBeverage1(){
+		
+		
+		cm.addRecipe(r1);
+		cm.checkInventory();
+		cm.makeCoffee(r1, 50);
+		
+		Recipe r2 = new Recipe();
+		r2.setName("Cappu");
+		r2.setPrice(50);
+		r2.setAmtCoffee(75);
+		r2.setAmtMilk(67);
+		r2.setAmtSugar(90);
+		r2.setAmtChocolate(80);
+		
+		cm.addRecipe(r2);
+		cm.makeCoffee(r2,50);
+		assertEquals(50,cm.makeCoffee(r2,50));
+		assertEquals(49,cm.makeCoffee(r2,45));
+	} 
 }

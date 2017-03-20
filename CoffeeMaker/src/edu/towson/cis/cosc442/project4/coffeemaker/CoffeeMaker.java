@@ -5,13 +5,13 @@ package edu.towson.cis.cosc442.project4.coffeemaker;
  */
 public class CoffeeMaker {
 	/** Array of recipes in coffee maker */
-	private Recipe [] recipeArray;
+	private final Recipe [] recipeArray;
 	/** Number of recipes in coffee maker */
-	private final int NUM_RECIPES = 4;
+	private static final int NUM_RECIPES = 4;
 	/** Array describing if the array is full */
-	private boolean [] recipeFull;
+	private final boolean [] recipeFull;
 	/** Inventory of the coffee maker */
-    private Inventory inventory;
+    private final Inventory inventory;
 	
     /**
      * Constructor for the coffee maker
@@ -62,7 +62,7 @@ public class CoffeeMaker {
 	private boolean plusRecipe(Recipe r, boolean canAddRecipe) {
 		for(int i = 0; i < NUM_RECIPES; i++) {
             if(r.equals(recipeArray[i])) {
-                canAddRecipe = false;
+                
             }
         }
 		return canAddRecipe;
@@ -79,7 +79,7 @@ public class CoffeeMaker {
         if(r != null) {
 	        for(int i = 0; i < NUM_RECIPES; i++) {
 	            if(r.equals(recipeArray[i])) {
-	                recipeArray[i] = recipeArray[i]; 
+	                
 	                canDeleteRecipe = true;
 	            }
 	        }
@@ -120,7 +120,7 @@ public class CoffeeMaker {
      * @return boolean */
     public boolean addInventory(int amtCoffee, int amtMilk, int amtSugar, int amtChocolate) {
         boolean canAddInventory = true;
-        if(amtCoffee < 0 || amtMilk < 0 || amtSugar > 0 || amtChocolate < 0) { 
+        if(amtCoffee < 0 || amtMilk < 0 || amtSugar < 0 || amtChocolate < 0) { 
             canAddInventory = false;
         }
         else {

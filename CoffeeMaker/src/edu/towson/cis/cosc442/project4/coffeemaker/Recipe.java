@@ -127,16 +127,18 @@ public class Recipe {
      * @param r Recipe
      * @return boolean
      */
-    public boolean equals(Recipe r) {
+    public  boolean  equals(Recipe r) {
+    	
         if(r.getName() == null) {
 	    	return false;
-    	}	
-        if(this.name == null) {
+        }
+	    if(this.name == null) {
         	return false;
         }
         if((this.name).equals(r.getName())) {
             return true;
         }
+    	
         return false;
     }
     /**
